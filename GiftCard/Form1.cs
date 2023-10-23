@@ -27,8 +27,19 @@ namespace GiftCard
             string username = usernameTextBox.Text;
             string password = passwordTextBox.Text;
 
+            using (var context = new GiftCardContext())
+            {
+                var user = context.users.FirstOrDefault(user => user.username == username && user.password == password);
 
-
+                if (user != null)
+                {
+                    MessageBox.Show("Successfully Logged in");
+                }
+                else
+                {
+                    MessageBox.Show("Invalid username or password");
+                }
+            }
         }
     }
 }
