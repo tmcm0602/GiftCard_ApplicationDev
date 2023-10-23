@@ -1,0 +1,10 @@
+C:\Users\tmcm0\OneDrive\Documents\GitHub\GiftCard_ApplicationDev\GiftCardDB\bin\Debug\GiftCardDB.dacpac
+C:\Users\tmcm0\OneDrive\Documents\GitHub\GiftCard_ApplicationDev\GiftCardDB\bin\Debug\GiftCardDB.dll
+C:\Users\tmcm0\OneDrive\Documents\GitHub\GiftCard_ApplicationDev\GiftCardDB\bin\Debug\GiftCardDB.pdb
+C:\Users\tmcm0\OneDrive\Documents\GitHub\GiftCard_ApplicationDev\GiftCardDB\obj\Debug\GiftCardDB.sqlproj.AssemblyReference.cache
+C:\Users\tmcm0\OneDrive\Documents\GitHub\GiftCard_ApplicationDev\GiftCardDB\obj\Debug\Model.xml
+C:\Users\tmcm0\OneDrive\Documents\GitHub\GiftCard_ApplicationDev\GiftCardDB\obj\Debug\refactor.xml
+C:\Users\tmcm0\OneDrive\Documents\GitHub\GiftCard_ApplicationDev\GiftCardDB\obj\Debug\postdeploy.sql
+C:\Users\tmcm0\OneDrive\Documents\GitHub\GiftCard_ApplicationDev\GiftCardDB\obj\Debug\predeploy.sql
+C:\Users\tmcm0\OneDrive\Documents\GitHub\GiftCard_ApplicationDev\GiftCardDB\obj\Debug\GiftCardDB.dll
+C:\Users\tmcm0\OneDrive\Documents\GitHub\GiftCard_ApplicationDev\GiftCardDB\obj\Debug\GiftCardDB.pdb
