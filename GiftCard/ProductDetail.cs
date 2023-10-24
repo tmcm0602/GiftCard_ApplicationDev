@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace GiftCard
 {
-    public partial class ProductDetails : Form
+    public partial class ProductDetail : Form
     {
-        public ProductDetails()
+        public ProductDetail()
         {
             InitializeComponent();
         }

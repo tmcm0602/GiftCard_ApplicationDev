@@ -43,8 +43,11 @@ namespace GiftCard
 
         private void pictureBoxProduct_Click(object sender, EventArgs e)
         {
-            ProductDetails productDetails = new ProductDetails();
-            productDetails.Show();
+            //ProductDetails productDetails = new ProductDetails();
+            //productDetails.Show();
+
+            ProductDetail productDetail = new ProductDetail();
+            productDetail.Show();
 
             
         }

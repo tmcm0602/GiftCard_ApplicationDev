@@ -102,7 +102,6 @@ C:\Users\Pyae\Documents\GitHub\GiftCard_ApplicationDev\GiftCard\bin\Debug\net6.0
 C:\Users\Pyae\Documents\GitHub\GiftCard_ApplicationDev\GiftCard\obj\Debug\net6.0-windows\GiftCard.csproj.AssemblyReference.cache
 C:\Users\Pyae\Documents\GitHub\GiftCard_ApplicationDev\GiftCard\obj\Debug\net6.0-windows\GiftCard.Form1.resources
 C:\Users\Pyae\Documents\GitHub\GiftCard_ApplicationDev\GiftCard\obj\Debug\net6.0-windows\GiftCard.MainForm.resources
-C:\Users\Pyae\Documents\GitHub\GiftCard_ApplicationDev\GiftCard\obj\Debug\net6.0-windows\GiftCard.ProductDetails.resources
 C:\Users\Pyae\Documents\GitHub\GiftCard_ApplicationDev\GiftCard\obj\Debug\net6.0-windows\GiftCard.ProductItem.resources
 C:\Users\Pyae\Documents\GitHub\GiftCard_ApplicationDev\GiftCard\obj\Debug\net6.0-windows\GiftCard.Properties.Resources.resources
 C:\Users\Pyae\Documents\GitHub\GiftCard_ApplicationDev\GiftCard\obj\Debug\net6.0-windows\GiftCard.csproj.GenerateResource.cache
@@ -117,3 +116,4 @@ C:\Users\Pyae\Documents\GitHub\GiftCard_ApplicationDev\GiftCard\obj\Debug\net6.0
 C:\Users\Pyae\Documents\GitHub\GiftCard_ApplicationDev\GiftCard\obj\Debug\net6.0-windows\GiftCard.genruntimeconfig.cache
 C:\Users\Pyae\Documents\GitHub\GiftCard_ApplicationDev\GiftCard\obj\Debug\net6.0-windows\ref\GiftCard.dll
 C:\Users\Pyae\Documents\GitHub\GiftCard_ApplicationDev\GiftCard\obj\Debug\net6.0-windows\GiftCard.HomePage.resources
+C:\Users\Pyae\Documents\GitHub\GiftCard_ApplicationDev\GiftCard\obj\Debug\net6.0-windows\GiftCard.ProductDetail.resources
