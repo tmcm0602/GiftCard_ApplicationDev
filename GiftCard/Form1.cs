@@ -33,7 +33,8 @@ namespace GiftCard
 
                 if (user != null)
                 {
-                    MessageBox.Show("Successfully Logged in");
+                    MainForm mainform = new MainForm();
+                    mainform.Show();
                 }
                 else
                 {

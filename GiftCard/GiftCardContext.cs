@@ -18,7 +18,13 @@ namespace GiftCard
 
             optionsBuilder.UseSqlServer("Server=tcp:applicationdev.database.windows.net,1433;Initial Catalog=giftcarddb;Persist Security Info=False;User ID=applicationdev;Password=GiftCard1;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
         }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
 
-        
+
+            modelBuilder.Entity<User>().HasKey(user => user.username);
+        }
+
     }
 }
