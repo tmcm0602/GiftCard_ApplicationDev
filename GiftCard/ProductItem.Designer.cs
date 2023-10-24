@@ -29,36 +29,27 @@
         private void InitializeComponent()
         {
             pictureBoxProduct = new PictureBox();
-            buttonPrice = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBoxProduct).BeginInit();
             SuspendLayout();
             // 
             // pictureBoxProduct
             // 
+            pictureBoxProduct.Anchor = AnchorStyles.None;
             pictureBoxProduct.Location = new Point(0, 0);
             pictureBoxProduct.Name = "pictureBoxProduct";
-            pictureBoxProduct.Size = new Size(216, 127);
+            pictureBoxProduct.Size = new Size(234, 148);
             pictureBoxProduct.TabIndex = 0;
             pictureBoxProduct.TabStop = false;
-            // 
-            // buttonPrice
-            // 
-            buttonPrice.Location = new Point(63, 127);
-            buttonPrice.Name = "buttonPrice";
-            buttonPrice.Size = new Size(94, 29);
-            buttonPrice.TabIndex = 1;
-            buttonPrice.Text = "button1";
-            buttonPrice.UseVisualStyleBackColor = true;
+            pictureBoxProduct.Click += pictureBoxProduct_Click;
             // 
             // ProductItem
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(buttonPrice);
             Controls.Add(pictureBoxProduct);
             Margin = new Padding(10);
             Name = "ProductItem";
-            Size = new Size(216, 159);
+            Size = new Size(234, 148);
             Load += ProductItem_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBoxProduct).EndInit();
             ResumeLayout(false);
@@ -67,6 +58,5 @@
         #endregion
 
         private PictureBox pictureBoxProduct;
-        private Button buttonPrice;
     }
 }

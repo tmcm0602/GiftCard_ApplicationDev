@@ -16,22 +16,23 @@ namespace GiftCard
         public string ImagePath
         {
             get { return pictureBoxProduct.ImageLocation; }
-            set { pictureBoxProduct.ImageLocation = value; }
+            set { pictureBoxProduct.ImageLocation = value; pictureBoxProduct.SizeMode = PictureBoxSizeMode.Zoom; }
         }
 
         // Property to set the price label text
-        public double Price
+        /*public double Price
         {
             get { return double.Parse(buttonPrice.Text); }
-            set { buttonPrice.Text = value.ToString("C"); pictureBoxProduct.SizeMode = PictureBoxSizeMode.Zoom; } // Display price as currency
-        }
+            set { buttonPrice.Text = value.ToString("C"); pictureBoxProduct.SizeMode = PictureBoxSizeMode.Zoom; }
+        }*/
 
-        // Event handler for the purchase button
-        public event EventHandler PurchaseClicked;
+
+        public event EventHandler buttonClicked;
 
         public ProductItem()
         {
             InitializeComponent();
+
         }
 
 
@@ -40,10 +41,11 @@ namespace GiftCard
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void pictureBoxProduct_Click(object sender, EventArgs e)
         {
-            PurchaseClicked?.Invoke(this, EventArgs.Empty);
-            MessageBox.Show("You have bought this product");
+            // Handle the click event. For example, open a new form.
+
+            MessageBox.Show("You have selected this item"); // Show a product details form or perform your action here.
         }
     }
 }

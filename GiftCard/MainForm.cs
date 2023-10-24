@@ -16,7 +16,7 @@ namespace GiftCard
         {
             InitializeComponent();
             AddProductItems();
-           
+
         }
 
         private void AddProductItems()
@@ -24,9 +24,12 @@ namespace GiftCard
             // Create a list of product information (image path, price, etc.)
             var products = new[]
             {
-                new { ImagePath = "C:\\Users\\tmcm0\\OneDrive\\Documents\\GitHub\\GiftCard_ApplicationDev\\GiftCard\\Images\\KayoGiftCard.png", Price = 25.00 },
-                new { ImagePath = "C:\\Users\\tmcm0\\OneDrive\\Documents\\GitHub\\GiftCard_ApplicationDev\\GiftCard\\Images\\KayoGiftCard.png", Price = 50.00 },
-                // Add more products here
+                new { ImagePath = "C:\\Users\\tmcm0\\OneDrive\\Documents\\GitHub\\GiftCard_ApplicationDev\\GiftCard\\Images\\KayoGiftCard.png" },
+                new { ImagePath = "C:\\Users\\tmcm0\\OneDrive\\Documents\\GitHub\\GiftCard_ApplicationDev\\GiftCard\\Images\\KayoGiftCard.png" },
+                new { ImagePath = "C:\\Users\\tmcm0\\OneDrive\\Documents\\GitHub\\GiftCard_ApplicationDev\\GiftCard\\Images\\BingeGiftCard.png" },
+                new { ImagePath = "C:\\Users\\tmcm0\\OneDrive\\Documents\\GitHub\\GiftCard_ApplicationDev\\GiftCard\\Images\\WestfieldGiftCard.png" },
+                new { ImagePath = "C:\\Users\\tmcm0\\OneDrive\\Documents\\GitHub\\GiftCard_ApplicationDev\\GiftCard\\Images\\JBhifiGiftCard.png" },
+                new { ImagePath = "C:\\Users\\tmcm0\\OneDrive\\Documents\\GitHub\\GiftCard_ApplicationDev\\GiftCard\\Images\\RebelGiftCard.png" },
             };
 
             // Loop through the list of products and create a product item for each
@@ -36,10 +39,10 @@ namespace GiftCard
                 var productItem = new ProductItem
                 {
                     ImagePath = product.ImagePath,
-                    Price = product.Price
+                    //Price = product.Price
                 };
 
-                // Add the product item to the FlowLayoutPanel
+
                 flowLayoutPanel1.Controls.Add(productItem);
             }
         }
