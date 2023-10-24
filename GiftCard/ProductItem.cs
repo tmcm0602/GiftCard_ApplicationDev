@@ -43,9 +43,10 @@ namespace GiftCard
 
         private void pictureBoxProduct_Click(object sender, EventArgs e)
         {
-            // Handle the click event. For example, open a new form.
+            ProductDetails productDetails = new ProductDetails();
+            productDetails.Show();
 
-            MessageBox.Show("You have selected this item"); // Show a product details form or perform your action here.
+            
         }
     }
 }

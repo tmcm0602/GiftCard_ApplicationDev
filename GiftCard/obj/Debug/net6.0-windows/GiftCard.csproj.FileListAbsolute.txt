@@ -56,3 +56,4 @@ C:\Users\tmcm0\OneDrive\Documents\GitHub\GiftCard_ApplicationDev\GiftCard\bin\De
 C:\Users\tmcm0\OneDrive\Documents\GitHub\GiftCard_ApplicationDev\GiftCard\obj\Debug\net6.0-windows\GiftCard.MainForm.resources
 C:\Users\tmcm0\OneDrive\Documents\GitHub\GiftCard_ApplicationDev\GiftCard\obj\Debug\net6.0-windows\GiftCard.ProductItem.resources
 C:\Users\tmcm0\OneDrive\Documents\GitHub\GiftCard_ApplicationDev\GiftCard\obj\Debug\net6.0-windows\GiftCard.Properties.Resources.resources
+C:\Users\tmcm0\OneDrive\Documents\GitHub\GiftCard_ApplicationDev\GiftCard\obj\Debug\net6.0-windows\GiftCard.ProductDetails.resources
