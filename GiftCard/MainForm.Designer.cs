@@ -37,9 +37,10 @@
             // flowLayoutPanel1
             // 
             flowLayoutPanel1.Anchor = AnchorStyles.None;
-            flowLayoutPanel1.Location = new Point(52, 55);
+            flowLayoutPanel1.Location = new Point(46, 41);
+            flowLayoutPanel1.Margin = new Padding(3, 2, 3, 2);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(800, 395);
+            flowLayoutPanel1.Size = new Size(700, 296);
             flowLayoutPanel1.TabIndex = 0;
             flowLayoutPanel1.Paint += flowLayoutPanel1_Paint;
             // 
@@ -51,7 +52,8 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { myGiftCardsToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(904, 28);
+            menuStrip1.Padding = new Padding(5, 2, 0, 2);
+            menuStrip1.Size = new Size(791, 24);
             menuStrip1.TabIndex = 1;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -59,17 +61,19 @@
             // 
             myGiftCardsToolStripMenuItem.Font = new Font("Segoe UI Emoji", 9F, FontStyle.Bold, GraphicsUnit.Point);
             myGiftCardsToolStripMenuItem.Name = "myGiftCardsToolStripMenuItem";
-            myGiftCardsToolStripMenuItem.Size = new Size(120, 24);
-            myGiftCardsToolStripMenuItem.Text = "My GiftCards";
+            myGiftCardsToolStripMenuItem.Size = new Size(81, 20);
+            myGiftCardsToolStripMenuItem.Text = "Gift Cards";
+            myGiftCardsToolStripMenuItem.Click += myGiftCardsToolStripMenuItem_Click;
             // 
             // MainForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(904, 450);
+            ClientSize = new Size(791, 338);
             Controls.Add(flowLayoutPanel1);
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
+            Margin = new Padding(3, 2, 3, 2);
             Name = "MainForm";
             Text = "Main";
             menuStrip1.ResumeLayout(false);

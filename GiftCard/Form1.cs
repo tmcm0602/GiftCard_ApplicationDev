@@ -9,7 +9,7 @@ namespace GiftCard
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+           
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -33,8 +33,10 @@ namespace GiftCard
 
                 if (user != null)
                 {
-                    MainForm mainform = new MainForm();
-                    mainform.Show();
+                    //MainForm mainform = new MainForm();
+                    //mainform.Show();
+                    HomePage homePage = new HomePage();
+                    homePage.Show();
                 }
                 else
                 {
