@@ -9,7 +9,7 @@ namespace GiftCard
 {
     internal class GiftCardContext : DbContext
     {
-        public DbSet<GiftCard> GiftCards { get; set; }
+        public DbSet<GiftCard> GIFTCARD { get; set; }
         public DbSet<User> users { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

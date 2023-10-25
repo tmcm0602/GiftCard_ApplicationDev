@@ -34,16 +34,21 @@ namespace GiftCard
 
 
                 //stuck here
-                //var giftCardData = context.GiftCards.Where(giftCard => giftCard.GiftCardBrand == cardName)
-                //                .Select(giftCard => new
-                //                {
-                //                    giftCard.GiftCardBrand,
-                //                    giftCard.GiftCardName,
-                //                    giftCard.GiftCardDescription
-                //                }).ToList();
+                var giftCardData = context.GIFTCARD.Where(giftCard => giftCard.Brand == cardName)
+                                .Select(giftCard => new
+                                {
+                                    giftCard.Brand,
+                                    giftCard.GiftCardName,
+                                    giftCard.GiftCardDescription
+                                }).ToList();
 
-                //textBox3.Text = giftCardData.GiftCardBrand;
-                //richTextBox1.Text = giftCardData;
+                if(giftCardData!=null) 
+                {
+                    textBox2.Text = giftCardData[0].Brand;
+                    textBox3.Text = giftCardData[0].GiftCardName;
+                    richTextBox1.Text = giftCardData[0].GiftCardDescription;
+                }
+                
 
             }
         }
