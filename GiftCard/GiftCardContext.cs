@@ -26,5 +26,12 @@ namespace GiftCard
             modelBuilder.Entity<User>().HasKey(user => user.username);
         }
 
+        //protected override void OnModelCreating(ModelBuilder modelBuilder)
+        //{
+        //    base.OnModelCreating(modelBuilder);
+
+        //    modelBuilder.Entity<GiftCard>().HasKey()
+        //}
+
     }
 }

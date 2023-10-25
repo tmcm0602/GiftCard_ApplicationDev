@@ -36,20 +36,21 @@
             // 
             pictureBoxProduct.Anchor = AnchorStyles.None;
             pictureBoxProduct.Location = new Point(0, 0);
+            pictureBoxProduct.Margin = new Padding(3, 2, 3, 2);
             pictureBoxProduct.Name = "pictureBoxProduct";
-            pictureBoxProduct.Size = new Size(234, 148);
+            pictureBoxProduct.Size = new Size(205, 111);
             pictureBoxProduct.TabIndex = 0;
             pictureBoxProduct.TabStop = false;
-            pictureBoxProduct.Click += pictureBoxProduct_Click;
+            pictureBoxProduct.Click += product_CLick;
             // 
             // ProductItem
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(pictureBoxProduct);
-            Margin = new Padding(10);
+            Margin = new Padding(9, 8, 9, 8);
             Name = "ProductItem";
-            Size = new Size(234, 148);
+            Size = new Size(205, 111);
             Load += ProductItem_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBoxProduct).EndInit();
             ResumeLayout(false);

@@ -22,6 +22,7 @@ namespace GiftCard
         private void AddProductItems()
         {
             // Create a list of product information (image path, price, etc.)
+            string[] giftCards = new[] { "JBhifi", "Amazon", "Binge", "Kayo", "Rebel", "WestField", "JBhifi", "Amazon", "Binge", "Kayo", "Rebel", "WestField" };
             var products = new[]
             {   
                 //needed to add my own paths to access the image
@@ -32,6 +33,7 @@ namespace GiftCard
                 new { ImagePath  = "C:\\Users\\Pyae\\Documents\\GitHub\\GiftCard_ApplicationDev\\GiftCard\\Images\\RebelGiftCard.png"},
                 new { ImagePath  = "C:\\Users\\Pyae\\Documents\\GitHub\\GiftCard_ApplicationDev\\GiftCard\\Images\\WestfieldGiftCard.png"},
 
+
                 new { ImagePath = "C:\\Users\\tmcm0\\OneDrive\\Documents\\GitHub\\GiftCard_ApplicationDev\\GiftCard\\Images\\KayoGiftCard.png" },
                 new { ImagePath = "C:\\Users\\tmcm0\\OneDrive\\Documents\\GitHub\\GiftCard_ApplicationDev\\GiftCard\\Images\\KayoGiftCard.png" },
                 new { ImagePath = "C:\\Users\\tmcm0\\OneDrive\\Documents\\GitHub\\GiftCard_ApplicationDev\\GiftCard\\Images\\BingeGiftCard.png" },
@@ -40,6 +42,7 @@ namespace GiftCard
                 new { ImagePath = "C:\\Users\\tmcm0\\OneDrive\\Documents\\GitHub\\GiftCard_ApplicationDev\\GiftCard\\Images\\RebelGiftCard.png" },
             };
 
+            int n = 0;
             // Loop through the list of products and create a product item for each
             foreach (var product in products)
             {
@@ -47,11 +50,23 @@ namespace GiftCard
                 var productItem = new ProductItem
                 {
                     ImagePath = product.ImagePath,
+                    GiftcardName = giftCards[n],
                     //Price = product.Price
                 };
+                n++;
+
+                
+                productItem.ItemClicked += (sender, e) =>
+                {
+                    //MessageBox.Show(productItem.GiftcardName);
+                    ProductDetail productDetail = new ProductDetail(productItem.GiftcardName);
+                    productDetail.Show();
 
 
+                };
+           
                 flowLayoutPanel1.Controls.Add(productItem);
+                
             }
         }
 

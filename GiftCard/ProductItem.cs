@@ -12,7 +12,7 @@ namespace GiftCard
 {
     public partial class ProductItem : UserControl
     {
-
+        private string giftcardName;
         public string ImagePath
         {
             get { return pictureBoxProduct.ImageLocation; }
@@ -26,11 +26,24 @@ namespace GiftCard
             set { buttonPrice.Text = value.ToString("C"); pictureBoxProduct.SizeMode = PictureBoxSizeMode.Zoom; }
         }*/
 
+        //public string[] ItemName
+        //{
+        //    get { return itemName; }
+        //}
+
+        public string GiftcardName
+        {
+            get { return giftcardName;}
+            set { giftcardName = value;}
+        }
+
 
         public event EventHandler buttonClicked;
+        public event EventHandler ItemClicked;
 
         public ProductItem()
         {
+            //itemName = new[] { "JBhifi", "Amazon", "Binge", "Kayo", "Rebel", "WestField" }; 
             InitializeComponent();
 
         }
@@ -41,15 +54,20 @@ namespace GiftCard
 
         }
 
-        private void pictureBoxProduct_Click(object sender, EventArgs e)
+        //private void pictureBoxProduct_Click(object sender, EventArgs e)
+        //{
+        //    //ProductDetails productDetails = new ProductDetails();
+        //    //productDetails.Show();
+
+        //    ProductDetail productDetail = new ProductDetail();
+        //    productDetail.Show();
+
+
+        //}
+
+        private void product_CLick(object sender, EventArgs e)
         {
-            //ProductDetails productDetails = new ProductDetails();
-            //productDetails.Show();
-
-            ProductDetail productDetail = new ProductDetail();
-            productDetail.Show();
-
-            
+            ItemClicked?.Invoke(this, EventArgs.Empty);
         }
     }
 }
