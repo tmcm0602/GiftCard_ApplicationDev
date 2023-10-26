@@ -12,5 +12,7 @@ namespace GiftCard
         public string username { get; set; }
         public int Giftcard_id { get; set; }
 
+        public decimal Giftcard_availablefunds { get; set; }
+
     }
 }

@@ -85,10 +85,14 @@ namespace GiftCard
                 {
                     var userGiftCard = context.GIFTCARD
                                       .Where(giftCard => giftCard.Brand == cardBrand && giftCard.GiftCardValue == Convert.ToInt32(walletOptions.Items[item]))
-                                      .Select(giftCard => giftCard.Id);
+                                      .Select(giftCard => new
+                                      {
+                                          giftCard.Id,
+                                          giftCard.GiftCardValue
+                                      }).ToList();
                     Random random = new Random();
                     int num = random.Next(50000, 100000);
-                    var userCard = new UserGiftCards() { Id = num, username = userName, Giftcard_id = userGiftCard.FirstOrDefault() };
+                    var userCard = new UserGiftCards() { Id = num, username = userName, Giftcard_id = userGiftCard[0].Id, Giftcard_availablefunds = userGiftCard[0].GiftCardValue };
                     context.UserGiftCards.Add(userCard);
                     context.SaveChanges();
                 }
