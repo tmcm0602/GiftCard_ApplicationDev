@@ -12,8 +12,10 @@ namespace GiftCard
 {
     public partial class HomePage : Form
     {
-        public HomePage()
+        private string username;
+        public HomePage(string username)
         {
+            this.username = username;
             InitializeComponent();
         }
 
@@ -25,7 +27,7 @@ namespace GiftCard
 
         private void BuyButton_Click(object sender, EventArgs e)
         {
-            MainForm mainForm = new MainForm();
+            MainForm mainForm = new MainForm(username);
             mainForm.Show();
         }
 

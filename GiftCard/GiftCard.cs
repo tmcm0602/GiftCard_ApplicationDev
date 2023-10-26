@@ -8,9 +8,9 @@ namespace GiftCard
 {
     public class GiftCard
     {
-        public int GiftCardId { get; set; }
+        public int Id { get; set; }
         public string Brand { get; set; }
-        public double GiftCardValue { get; set; }
+        public int GiftCardValue { get; set; }
         public string GiftCardName { get; set; }
         public string GiftCardDescription { get; set; }
 

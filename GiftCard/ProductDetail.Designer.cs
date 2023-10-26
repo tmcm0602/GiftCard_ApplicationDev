@@ -30,16 +30,19 @@
         {
             label1 = new Label();
             groupBox1 = new GroupBox();
-            label2 = new Label();
-            label3 = new Label();
-            label4 = new Label();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
             richTextBox1 = new RichTextBox();
+            textBox3 = new TextBox();
+            textBox2 = new TextBox();
+            label4 = new Label();
+            label3 = new Label();
+            label2 = new Label();
             groupBox2 = new GroupBox();
-            label5 = new Label();
+            richTextBox2 = new RichTextBox();
+            exitButton = new Button();
+            purchaseButton = new Button();
+            walletOptions = new ListBox();
             label6 = new Label();
-            listBox1 = new ListBox();
+            label5 = new Label();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             SuspendLayout();
@@ -70,14 +73,36 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Details";
             // 
-            // label2
+            // richTextBox1
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(33, 51);
-            label2.Name = "label2";
-            label2.Size = new Size(62, 20);
-            label2.TabIndex = 0;
-            label2.Text = "Brand:";
+            richTextBox1.Location = new Point(37, 181);
+            richTextBox1.Name = "richTextBox1";
+            richTextBox1.Size = new Size(287, 159);
+            richTextBox1.TabIndex = 6;
+            richTextBox1.Text = "";
+            // 
+            // textBox3
+            // 
+            textBox3.Location = new Point(170, 98);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(154, 26);
+            textBox3.TabIndex = 5;
+            // 
+            // textBox2
+            // 
+            textBox2.Location = new Point(117, 48);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(207, 26);
+            textBox2.TabIndex = 4;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(35, 146);
+            label4.Name = "label4";
+            label4.Size = new Size(105, 20);
+            label4.TabIndex = 2;
+            label4.Text = "Description:";
             // 
             // label3
             // 
@@ -89,40 +114,21 @@
             label3.Text = "Gift Card Name:";
             label3.Click += label3_Click;
             // 
-            // label4
+            // label2
             // 
-            label4.AutoSize = true;
-            label4.Location = new Point(35, 146);
-            label4.Name = "label4";
-            label4.Size = new Size(105, 20);
-            label4.TabIndex = 2;
-            label4.Text = "Description:";
-            // 
-            // textBox2
-            // 
-            textBox2.Location = new Point(117, 48);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(207, 26);
-            textBox2.TabIndex = 4;
-            // 
-            // textBox3
-            // 
-            textBox3.Location = new Point(170, 98);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(154, 26);
-            textBox3.TabIndex = 5;
-            // 
-            // richTextBox1
-            // 
-            richTextBox1.Location = new Point(37, 181);
-            richTextBox1.Name = "richTextBox1";
-            richTextBox1.Size = new Size(287, 159);
-            richTextBox1.TabIndex = 6;
-            richTextBox1.Text = "";
+            label2.AutoSize = true;
+            label2.Location = new Point(33, 51);
+            label2.Name = "label2";
+            label2.Size = new Size(62, 20);
+            label2.TabIndex = 0;
+            label2.Text = "Brand:";
             // 
             // groupBox2
             // 
-            groupBox2.Controls.Add(listBox1);
+            groupBox2.Controls.Add(richTextBox2);
+            groupBox2.Controls.Add(exitButton);
+            groupBox2.Controls.Add(purchaseButton);
+            groupBox2.Controls.Add(walletOptions);
             groupBox2.Controls.Add(label6);
             groupBox2.Controls.Add(label5);
             groupBox2.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
@@ -133,13 +139,42 @@
             groupBox2.TabStop = false;
             groupBox2.Text = "Purchase Options";
             // 
-            // label5
+            // richTextBox2
             // 
-            label5.AutoSize = true;
-            label5.Location = new Point(6, 48);
-            label5.Name = "label5";
-            label5.Size = new Size(0, 20);
-            label5.TabIndex = 0;
+            richTextBox2.Location = new Point(170, 83);
+            richTextBox2.Name = "richTextBox2";
+            richTextBox2.Size = new Size(212, 204);
+            richTextBox2.TabIndex = 5;
+            richTextBox2.Text = "";
+            // 
+            // exitButton
+            // 
+            exitButton.Location = new Point(244, 317);
+            exitButton.Name = "exitButton";
+            exitButton.Size = new Size(127, 54);
+            exitButton.TabIndex = 4;
+            exitButton.Text = "Exit";
+            exitButton.UseVisualStyleBackColor = true;
+            // 
+            // purchaseButton
+            // 
+            purchaseButton.Location = new Point(36, 317);
+            purchaseButton.Name = "purchaseButton";
+            purchaseButton.Size = new Size(127, 54);
+            purchaseButton.TabIndex = 3;
+            purchaseButton.Text = "Purchase";
+            purchaseButton.UseVisualStyleBackColor = true;
+            purchaseButton.Click += Purchase_Click;
+            // 
+            // walletOptions
+            // 
+            walletOptions.FormattingEnabled = true;
+            walletOptions.ItemHeight = 20;
+            walletOptions.Location = new Point(15, 83);
+            walletOptions.Name = "walletOptions";
+            walletOptions.SelectionMode = SelectionMode.MultiSimple;
+            walletOptions.Size = new Size(127, 204);
+            walletOptions.TabIndex = 2;
             // 
             // label6
             // 
@@ -150,14 +185,13 @@
             label6.TabIndex = 1;
             label6.Text = "Wallet Options (A$)";
             // 
-            // listBox1
+            // label5
             // 
-            listBox1.FormattingEnabled = true;
-            listBox1.ItemHeight = 20;
-            listBox1.Location = new Point(12, 82);
-            listBox1.Name = "listBox1";
-            listBox1.Size = new Size(165, 264);
-            listBox1.TabIndex = 2;
+            label5.AutoSize = true;
+            label5.Location = new Point(6, 48);
+            label5.Name = "label5";
+            label5.Size = new Size(0, 20);
+            label5.TabIndex = 0;
             // 
             // ProductDetail
             // 
@@ -189,7 +223,10 @@
         private TextBox textBox2;
         private GroupBox groupBox2;
         private Label label5;
-        private ListBox listBox1;
+        private ListBox walletOptions;
         private Label label6;
+        private Button exitButton;
+        private Button purchaseButton;
+        private RichTextBox richTextBox2;
     }
 }

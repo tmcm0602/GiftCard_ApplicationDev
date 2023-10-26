@@ -12,11 +12,13 @@ namespace GiftCard
 {
     public partial class MainForm : Form
     {
-        public MainForm()
+        private string username;
+        public MainForm(string username)
         {
+            this.username = username;
             InitializeComponent();
             AddProductItems();
-
+            
         }
 
         private void AddProductItems()
@@ -59,7 +61,7 @@ namespace GiftCard
                 productItem.ItemClicked += (sender, e) =>
                 {
                     //MessageBox.Show(productItem.GiftcardName);
-                    ProductDetail productDetail = new ProductDetail(productItem.GiftcardName);
+                    ProductDetail productDetail = new ProductDetail(productItem.GiftcardName, username);
                     productDetail.Show();
 
 
