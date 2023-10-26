@@ -24,24 +24,15 @@ namespace GiftCard
         private void AddProductItems()
         {
             // Create a list of product information (image path, price, etc.)
-            string[] giftCards = new[] { "JBhifi", "Amazon", "Binge", "Kayo", "Rebel", "WestField", "JBhifi", "Amazon", "Binge", "Kayo", "Rebel", "WestField" };
+            string[] giftCards = new[] { "JBhifi", "Amazon", "Binge", "Kayo", "Rebel", "WestField"};
             var products = new[]
-            {   
-                //needed to add my own paths to access the image
-                /*new { ImagePath  = "C:\\Users\\Pyae\\Documents\\GitHub\\GiftCard_ApplicationDev\\GiftCard\\Images\\JBhifiGiftCard.png"},
-                new { ImagePath  = "C:\\Users\\Pyae\\Documents\\GitHub\\GiftCard_ApplicationDev\\GiftCard\\Images\\AmzaonGiftCard.png"},
-                new { ImagePath  = "C:\\Users\\Pyae\\Documents\\GitHub\\GiftCard_ApplicationDev\\GiftCard\\Images\\BingeGiftCard.png"},
-                new { ImagePath  = "C:\\Users\\Pyae\\Documents\\GitHub\\GiftCard_ApplicationDev\\GiftCard\\Images\\KayoGiftCard.png"},
-                new { ImagePath  = "C:\\Users\\Pyae\\Documents\\GitHub\\GiftCard_ApplicationDev\\GiftCard\\Images\\RebelGiftCard.png"},
-                new { ImagePath  = "C:\\Users\\Pyae\\Documents\\GitHub\\GiftCard_ApplicationDev\\GiftCard\\Images\\WestfieldGiftCard.png"},*/
-
-
-                new { ImagePath = "Images/AmzaonGiftCard.png" },
-                new { ImagePath = "Images/KayoGiftCard.png" },
-                new { ImagePath = "Images/BingeGiftCard.png" },
-                new { ImagePath = "Images/WestfieldGiftCard.png" },
+            {
                 new { ImagePath = "Images/JBhifiGiftCard.png" },
+                new { ImagePath = "Images/AmzaonGiftCard.png" },
+                new { ImagePath = "Images/BingeGiftCard.png" },
+                new { ImagePath = "Images/KayoGiftCard.png" },
                 new { ImagePath = "Images/RebelGiftCard.png" },
+                new { ImagePath = "Images/WestfieldGiftCard.png" },       
             };
 
             int n = 0;

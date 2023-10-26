@@ -88,7 +88,7 @@ namespace GiftCard
                                       .Select(giftCard => giftCard.Id);
                     Random random = new Random();
                     int num = random.Next(50000, 100000);
-                    var userCard = new UserGiftCard() { id = num, username = userName, GiftCard_Id = userGiftCard.FirstOrDefault() };
+                    var userCard = new UserGiftCards() { Id = num, username = userName, Giftcard_id = userGiftCard.FirstOrDefault() };
                     context.UserGiftCards.Add(userCard);
                     context.SaveChanges();
                 }

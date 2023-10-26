@@ -33,9 +33,6 @@ namespace GiftCard
 
                 if (user != null)
                 {
-                    //Changed?
-                    //MainForm mainform = new MainForm();
-                    //mainform.Show();
                     HomePage homePage = new HomePage(username);
                     homePage.Show();
                 }
