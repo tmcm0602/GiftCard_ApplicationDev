@@ -1,15 +1,15 @@
 namespace GiftCard
 {
-    public partial class Form1 : Form
+    public partial class LoginForm : Form
     {
-        public Form1()
+        public LoginForm()
         {
             InitializeComponent();
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-           
+
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -33,9 +33,13 @@ namespace GiftCard
 
                 if (user != null)
                 {
+<<<<<<< HEAD:GiftCard/LoginForm.cs
                     //MainForm mainform = new MainForm();
                     //mainform.Show();
-                    HomePage homePage = new HomePage();
+                    HomePage homePage = new HomePage(user.username);
+=======
+                    HomePage homePage = new HomePage(username);
+>>>>>>> f10a3ed4a91f7a4c9b83237b185a7712c9618c5b:GiftCard/Form1.cs
                     homePage.Show();
                 }
                 else
@@ -43,6 +47,11 @@ namespace GiftCard
                     MessageBox.Show("Invalid username or password");
                 }
             }
+        }
+
+        private void usernameTextBox_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

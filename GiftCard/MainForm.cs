@@ -12,34 +12,37 @@ namespace GiftCard
 {
     public partial class MainForm : Form
     {
-        public MainForm()
+        private string username;
+        public MainForm(string username)
         {
+            this.username = username;
             InitializeComponent();
             AddProductItems();
-
+            
         }
 
         private void AddProductItems()
         {
             // Create a list of product information (image path, price, etc.)
-            string[] giftCards = new[] { "JBhifi", "Amazon", "Binge", "Kayo", "Rebel", "WestField", "JBhifi", "Amazon", "Binge", "Kayo", "Rebel", "WestField" };
+<<<<<<< HEAD
+            string[] giftCards = new[] { "JBhifi", "Amazon", "Binge", "Kayo", "Rebel", "WestField" };
             var products = new[]
             {   
-                //needed to add my own paths to access the image
-                /*new { ImagePath  = "C:\\Users\\Pyae\\Documents\\GitHub\\GiftCard_ApplicationDev\\GiftCard\\Images\\JBhifiGiftCard.png"},
-                new { ImagePath  = "C:\\Users\\Pyae\\Documents\\GitHub\\GiftCard_ApplicationDev\\GiftCard\\Images\\AmzaonGiftCard.png"},
-                new { ImagePath  = "C:\\Users\\Pyae\\Documents\\GitHub\\GiftCard_ApplicationDev\\GiftCard\\Images\\BingeGiftCard.png"},
-                new { ImagePath  = "C:\\Users\\Pyae\\Documents\\GitHub\\GiftCard_ApplicationDev\\GiftCard\\Images\\KayoGiftCard.png"},
-                new { ImagePath  = "C:\\Users\\Pyae\\Documents\\GitHub\\GiftCard_ApplicationDev\\GiftCard\\Images\\RebelGiftCard.png"},
-                new { ImagePath  = "C:\\Users\\Pyae\\Documents\\GitHub\\GiftCard_ApplicationDev\\GiftCard\\Images\\WestfieldGiftCard.png"},*/
-
-
                 new { ImagePath = "Images/AmzaonGiftCard.png" },
                 new { ImagePath = "Images/KayoGiftCard.png" },
                 new { ImagePath = "Images/BingeGiftCard.png" },
                 new { ImagePath = "Images/WestfieldGiftCard.png" },
+=======
+            string[] giftCards = new[] { "JBhifi", "Amazon", "Binge", "Kayo", "Rebel", "WestField"};
+            var products = new[]
+            {
+>>>>>>> f10a3ed4a91f7a4c9b83237b185a7712c9618c5b
                 new { ImagePath = "Images/JBhifiGiftCard.png" },
+                new { ImagePath = "Images/AmzaonGiftCard.png" },
+                new { ImagePath = "Images/BingeGiftCard.png" },
+                new { ImagePath = "Images/KayoGiftCard.png" },
                 new { ImagePath = "Images/RebelGiftCard.png" },
+                new { ImagePath = "Images/WestfieldGiftCard.png" },       
             };
 
             int n = 0;
@@ -59,7 +62,7 @@ namespace GiftCard
                 productItem.ItemClicked += (sender, e) =>
                 {
                     //MessageBox.Show(productItem.GiftcardName);
-                    ProductDetail productDetail = new ProductDetail(productItem.GiftcardName);
+                    ProductDetail productDetail = new ProductDetail(productItem.GiftcardName, username);
                     productDetail.Show();
 
 
