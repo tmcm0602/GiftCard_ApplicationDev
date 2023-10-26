@@ -24,19 +24,9 @@ namespace GiftCard
         private void AddProductItems()
         {
             // Create a list of product information (image path, price, etc.)
-<<<<<<< HEAD
-            string[] giftCards = new[] { "JBhifi", "Amazon", "Binge", "Kayo", "Rebel", "WestField" };
-            var products = new[]
-            {   
-                new { ImagePath = "Images/AmzaonGiftCard.png" },
-                new { ImagePath = "Images/KayoGiftCard.png" },
-                new { ImagePath = "Images/BingeGiftCard.png" },
-                new { ImagePath = "Images/WestfieldGiftCard.png" },
-=======
             string[] giftCards = new[] { "JBhifi", "Amazon", "Binge", "Kayo", "Rebel", "WestField"};
             var products = new[]
             {
->>>>>>> f10a3ed4a91f7a4c9b83237b185a7712c9618c5b
                 new { ImagePath = "Images/JBhifiGiftCard.png" },
                 new { ImagePath = "Images/AmzaonGiftCard.png" },
                 new { ImagePath = "Images/BingeGiftCard.png" },
