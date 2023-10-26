@@ -12,6 +12,8 @@ namespace GiftCard
         public DbSet<GiftCard> GIFTCARD { get; set; }
         public DbSet<User> users { get; set; }
 
+        public DbSet<UserGiftCards> userGiftCards { get; set; }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             base.OnConfiguring(optionsBuilder);

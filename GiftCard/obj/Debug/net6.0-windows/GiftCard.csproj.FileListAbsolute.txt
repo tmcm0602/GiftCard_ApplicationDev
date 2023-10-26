@@ -56,7 +56,6 @@ C:\Users\tmcm0\OneDrive\Documents\GitHub\GiftCard_ApplicationDev\GiftCard\bin\De
 C:\Users\tmcm0\OneDrive\Documents\GitHub\GiftCard_ApplicationDev\GiftCard\obj\Debug\net6.0-windows\GiftCard.MainForm.resources
 C:\Users\tmcm0\OneDrive\Documents\GitHub\GiftCard_ApplicationDev\GiftCard\obj\Debug\net6.0-windows\GiftCard.ProductItem.resources
 C:\Users\tmcm0\OneDrive\Documents\GitHub\GiftCard_ApplicationDev\GiftCard\obj\Debug\net6.0-windows\GiftCard.Properties.Resources.resources
-C:\Users\tmcm0\OneDrive\Documents\GitHub\GiftCard_ApplicationDev\GiftCard\obj\Debug\net6.0-windows\GiftCard.ProductDetails.resources
 C:\Users\Pyae\Documents\GitHub\GiftCard_ApplicationDev\GiftCard\bin\Debug\net6.0-windows\GiftCard.exe
 C:\Users\Pyae\Documents\GitHub\GiftCard_ApplicationDev\GiftCard\bin\Debug\net6.0-windows\GiftCard.deps.json
 C:\Users\Pyae\Documents\GitHub\GiftCard_ApplicationDev\GiftCard\bin\Debug\net6.0-windows\GiftCard.runtimeconfig.json
@@ -117,3 +116,12 @@ C:\Users\Pyae\Documents\GitHub\GiftCard_ApplicationDev\GiftCard\obj\Debug\net6.0
 C:\Users\Pyae\Documents\GitHub\GiftCard_ApplicationDev\GiftCard\obj\Debug\net6.0-windows\ref\GiftCard.dll
 C:\Users\Pyae\Documents\GitHub\GiftCard_ApplicationDev\GiftCard\obj\Debug\net6.0-windows\GiftCard.HomePage.resources
 C:\Users\Pyae\Documents\GitHub\GiftCard_ApplicationDev\GiftCard\obj\Debug\net6.0-windows\GiftCard.ProductDetail.resources
+C:\Users\tmcm0\OneDrive\Documents\GitHub\GiftCard_ApplicationDev\GiftCard\obj\Debug\net6.0-windows\GiftCard.HomePage.resources
+C:\Users\tmcm0\OneDrive\Documents\GitHub\GiftCard_ApplicationDev\GiftCard\obj\Debug\net6.0-windows\GiftCard.ProductDetail.resources
+C:\Users\tmcm0\OneDrive\Documents\GitHub\GiftCard_ApplicationDev\GiftCard\bin\Debug\net6.0-windows\Images\AmzaonGiftCard.png
+C:\Users\tmcm0\OneDrive\Documents\GitHub\GiftCard_ApplicationDev\GiftCard\bin\Debug\net6.0-windows\Images\BingeGiftCard.png
+C:\Users\tmcm0\OneDrive\Documents\GitHub\GiftCard_ApplicationDev\GiftCard\bin\Debug\net6.0-windows\Images\JBhifiGiftCard.png
+C:\Users\tmcm0\OneDrive\Documents\GitHub\GiftCard_ApplicationDev\GiftCard\bin\Debug\net6.0-windows\Images\KayoGiftCard.png
+C:\Users\tmcm0\OneDrive\Documents\GitHub\GiftCard_ApplicationDev\GiftCard\bin\Debug\net6.0-windows\Images\RebelGiftCard.png
+C:\Users\tmcm0\OneDrive\Documents\GitHub\GiftCard_ApplicationDev\GiftCard\bin\Debug\net6.0-windows\Images\WestfieldGiftCard.png
+C:\Users\tmcm0\OneDrive\Documents\GitHub\GiftCard_ApplicationDev\GiftCard\obj\Debug\net6.0-windows\GiftCard.MyGiftCards.resources

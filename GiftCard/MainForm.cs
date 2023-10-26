@@ -26,20 +26,20 @@ namespace GiftCard
             var products = new[]
             {   
                 //needed to add my own paths to access the image
-                new { ImagePath  = "C:\\Users\\Pyae\\Documents\\GitHub\\GiftCard_ApplicationDev\\GiftCard\\Images\\JBhifiGiftCard.png"},
+                /*new { ImagePath  = "C:\\Users\\Pyae\\Documents\\GitHub\\GiftCard_ApplicationDev\\GiftCard\\Images\\JBhifiGiftCard.png"},
                 new { ImagePath  = "C:\\Users\\Pyae\\Documents\\GitHub\\GiftCard_ApplicationDev\\GiftCard\\Images\\AmzaonGiftCard.png"},
                 new { ImagePath  = "C:\\Users\\Pyae\\Documents\\GitHub\\GiftCard_ApplicationDev\\GiftCard\\Images\\BingeGiftCard.png"},
                 new { ImagePath  = "C:\\Users\\Pyae\\Documents\\GitHub\\GiftCard_ApplicationDev\\GiftCard\\Images\\KayoGiftCard.png"},
                 new { ImagePath  = "C:\\Users\\Pyae\\Documents\\GitHub\\GiftCard_ApplicationDev\\GiftCard\\Images\\RebelGiftCard.png"},
-                new { ImagePath  = "C:\\Users\\Pyae\\Documents\\GitHub\\GiftCard_ApplicationDev\\GiftCard\\Images\\WestfieldGiftCard.png"},
+                new { ImagePath  = "C:\\Users\\Pyae\\Documents\\GitHub\\GiftCard_ApplicationDev\\GiftCard\\Images\\WestfieldGiftCard.png"},*/
 
 
-                new { ImagePath = "C:\\Users\\tmcm0\\OneDrive\\Documents\\GitHub\\GiftCard_ApplicationDev\\GiftCard\\Images\\KayoGiftCard.png" },
-                new { ImagePath = "C:\\Users\\tmcm0\\OneDrive\\Documents\\GitHub\\GiftCard_ApplicationDev\\GiftCard\\Images\\KayoGiftCard.png" },
-                new { ImagePath = "C:\\Users\\tmcm0\\OneDrive\\Documents\\GitHub\\GiftCard_ApplicationDev\\GiftCard\\Images\\BingeGiftCard.png" },
-                new { ImagePath = "C:\\Users\\tmcm0\\OneDrive\\Documents\\GitHub\\GiftCard_ApplicationDev\\GiftCard\\Images\\WestfieldGiftCard.png" },
-                new { ImagePath = "C:\\Users\\tmcm0\\OneDrive\\Documents\\GitHub\\GiftCard_ApplicationDev\\GiftCard\\Images\\JBhifiGiftCard.png" },
-                new { ImagePath = "C:\\Users\\tmcm0\\OneDrive\\Documents\\GitHub\\GiftCard_ApplicationDev\\GiftCard\\Images\\RebelGiftCard.png" },
+                new { ImagePath = "Images/AmzaonGiftCard.png" },
+                new { ImagePath = "Images/KayoGiftCard.png" },
+                new { ImagePath = "Images/BingeGiftCard.png" },
+                new { ImagePath = "Images/WestfieldGiftCard.png" },
+                new { ImagePath = "Images/JBhifiGiftCard.png" },
+                new { ImagePath = "Images/RebelGiftCard.png" },
             };
 
             int n = 0;
@@ -55,7 +55,7 @@ namespace GiftCard
                 };
                 n++;
 
-                
+
                 productItem.ItemClicked += (sender, e) =>
                 {
                     //MessageBox.Show(productItem.GiftcardName);
@@ -64,9 +64,9 @@ namespace GiftCard
 
 
                 };
-           
+
                 flowLayoutPanel1.Controls.Add(productItem);
-                
+
             }
         }
 
@@ -76,6 +76,12 @@ namespace GiftCard
         }
 
         private void myGiftCardsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
         }
