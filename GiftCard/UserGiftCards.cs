@@ -8,7 +8,7 @@ namespace GiftCard
 {
     internal class UserGiftCards
     {
-        public int Id { get; set; }
+        public int id { get; set; }
         public string username { get; set; }
         public int Giftcard_id { get; set; }
 

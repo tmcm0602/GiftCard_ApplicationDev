@@ -22,7 +22,7 @@ namespace GiftCard
 
         private void ViewButton_Click(object sender, EventArgs e)
         {
-            
+            new MyGiftCards(this.username).Show();
         }
 
         private void BuyButton_Click(object sender, EventArgs e)
@@ -32,6 +32,11 @@ namespace GiftCard
         }
 
         private void GiftButton_Click(Object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
         {
 
         }

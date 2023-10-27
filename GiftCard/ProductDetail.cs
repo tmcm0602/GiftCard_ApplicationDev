@@ -79,7 +79,7 @@ namespace GiftCard
 
             foreach (int item in walletOptions.SelectedIndices)
             {
-                receipt = receipt + "$" + walletOptions.Items[item].ToString() + " Gift Card" +"\n";
+                receipt = receipt + "$" + walletOptions.Items[item].ToString() + " Gift Card" + "\n";
                 totalPrice += Convert.ToDouble(walletOptions.Items[item].ToString());
                 using (var context = new GiftCardContext())
                 {
@@ -92,7 +92,7 @@ namespace GiftCard
                                       }).ToList();
                     Random random = new Random();
                     int num = random.Next(50000, 100000);
-                    var userCard = new UserGiftCards() { Id = num, username = userName, Giftcard_id = userGiftCard[0].Id, Giftcard_availablefunds = userGiftCard[0].GiftCardValue };
+                    var userCard = new UserGiftCards() { id = num, username = userName, Giftcard_id = userGiftCard[0].Id, Giftcard_availablefunds = userGiftCard[0].GiftCardValue };
                     context.UserGiftCards.Add(userCard);
                     context.SaveChanges();
                 }
@@ -106,6 +106,11 @@ namespace GiftCard
         {
             string receipt = SelectWallet();
             richTextBox2.Text = receipt;
+        }
+
+        private void ProductDetail_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

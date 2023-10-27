@@ -19,5 +19,8 @@
     <Compile Update="ProductItem.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="GiftCardItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

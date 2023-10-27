@@ -14,7 +14,5 @@ namespace GiftCard
         public string GiftCardName { get; set; }
         public string GiftCardDescription { get; set; }
 
-        public string GiftCardCode { get; set; }
-
     }
 }
