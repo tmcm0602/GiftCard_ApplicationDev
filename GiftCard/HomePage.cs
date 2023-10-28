@@ -27,13 +27,14 @@ namespace GiftCard
 
         private void BuyButton_Click(object sender, EventArgs e)
         {
-            MainForm mainForm = new MainForm(username);
+            MainForm mainForm = new MainForm(this.username);
             mainForm.Show();
         }
 
         private void GiftButton_Click(Object sender, EventArgs e)
         {
-
+            GiftFriends giftFriends = new GiftFriends(this.username);
+            giftFriends.Show();
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
