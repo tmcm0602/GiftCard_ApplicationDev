@@ -37,8 +37,11 @@ namespace GiftCard
 
                 if (user != null)
                 {
+                    usernameTextBox.Text = string.Empty; 
+                    passwordTextBox.Text = string.Empty;
                     HomePage homePage = new HomePage(username);
                     homePage.Show();
+                    this.Hide();
                 }
                 else
                 {

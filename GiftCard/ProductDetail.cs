@@ -94,6 +94,7 @@ namespace GiftCard
                     int num = random.Next(50000, 100000);
                     var userCard = new UserGiftCards() { id = num, username = userName, Giftcard_id = userGiftCard[0].Id, Giftcard_availablefunds = userGiftCard[0].GiftCardValue };
                     context.UserGiftCards.Add(userCard);
+
                     context.SaveChanges();
                 }
                 //var userCard = new UserGiftCard () {id = 1111, username = "Matt22", GiftCard_Id = userGiftCar }
@@ -106,6 +107,11 @@ namespace GiftCard
         {
             string receipt = SelectWallet();
             richTextBox2.Text = receipt;
+        }
+
+        private void Exit_Click(Object sender, EventArgs e)
+        {
+            this.Hide();
         }
 
         private void ProductDetail_Load(object sender, EventArgs e)
