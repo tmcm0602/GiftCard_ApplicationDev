@@ -31,9 +31,11 @@ namespace GiftCard
             pictureBox1.Width = this.Width;
         }
 
+        public event EventHandler ItemClicked;
+
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-
+            ItemClicked?.Invoke(this, EventArgs.Empty);
         }
     }
 }

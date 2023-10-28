@@ -22,12 +22,6 @@ namespace GiftCard
             viewMyGiftCards();
         }
 
-        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-
-        }
-
         private void viewMyGiftCards()
         {
 
@@ -37,39 +31,43 @@ namespace GiftCard
             {
                 var userGiftCards = context.UserGiftCards.Where(userGiftCard => userGiftCard.username == this.loggedInUser)
                     .Select(userGiftCard => new
-                {
-                    giftCardId = userGiftCard.Giftcard_id,
-                    AvailableFunds = userGiftCard.Giftcard_availablefunds
-                })
+                    {
+                        giftCardId = userGiftCard.Giftcard_id,
+                        AvailableFunds = userGiftCard.Giftcard_availablefunds
+                    })
             .ToList();
 
-                /* usergiftCardIds = context.UserGiftCards.Where(usergiftCardIds => usergiftCardIds.username == this.loggedInUser)
-                                 .Select(usergiftCardIds => usergiftCardIds.Giftcard_id).ToList();
 
-                 List<Double> usergiftCardFunds = context.UserGiftCards.Where(usergiftCardFunds => usergiftCardFunds.username == this.loggedInUser)
-                                 .Select(usergiftCardFunds => usergiftCardFunds.Giftcard_availablefunds).ToList();*/
 
                 foreach (var userGiftCard in userGiftCards)
-                    {
+                {
                     var giftCard = context.GIFTCARD.FirstOrDefault(g => g.Id == userGiftCard.giftCardId);
-                        if (giftCard != null)
+                    if (giftCard != null)
+                    {
+                        var giftCardItem = new GiftCardItem
                         {
-                            var giftCardItem = new GiftCardItem
-                            {
-                                AvailableFunds = userGiftCard.AvailableFunds // Retrieve available funds from UserGiftCards
-                            };
+                            AvailableFunds = userGiftCard.AvailableFunds
+                        };
                         string imagePath = GetImagePathByBrand(giftCard.Brand);
-                        
+
                         if (!string.IsNullOrEmpty(imagePath))
                         {
                             giftCardItem.image = new Bitmap(imagePath);
                         }
 
                         giftCardItems.Add(giftCardItem);
+
+                        giftCardItem.ItemClicked += (sender, e) =>
+                        {
+                            string imagePath = GetImagePathByBrand(giftCard.Brand);
+
+                            GiftCardDetails giftcarddetails = new GiftCardDetails(giftCard, imagePath, this.loggedInUser);
+                            giftcarddetails.Show();
+                        };
                     }
-                }  
+                }
             }
-            
+
             foreach (var giftCardItem in giftCardItems)
             {
                 flowLayoutPanel1.Controls.Add(giftCardItem);
@@ -78,8 +76,6 @@ namespace GiftCard
 
 
 
-            //Form form = new Form(giftcard GiftCard) 
-            //form.show();
 
         }
 
@@ -103,6 +99,11 @@ namespace GiftCard
                 default:
                     return null; // You can return a default image for unknown brands if needed.
             }
+        }
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

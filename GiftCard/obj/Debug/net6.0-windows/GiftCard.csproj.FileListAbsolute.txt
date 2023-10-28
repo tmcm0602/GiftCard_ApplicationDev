@@ -3,7 +3,6 @@ C:\Users\tmcm0\OneDrive\Documents\GitHub\GiftCard_ApplicationDev\GiftCard\bin\De
 C:\Users\tmcm0\OneDrive\Documents\GitHub\GiftCard_ApplicationDev\GiftCard\bin\Debug\net6.0-windows\GiftCard.runtimeconfig.json
 C:\Users\tmcm0\OneDrive\Documents\GitHub\GiftCard_ApplicationDev\GiftCard\bin\Debug\net6.0-windows\GiftCard.dll
 C:\Users\tmcm0\OneDrive\Documents\GitHub\GiftCard_ApplicationDev\GiftCard\bin\Debug\net6.0-windows\GiftCard.pdb
-C:\Users\tmcm0\OneDrive\Documents\GitHub\GiftCard_ApplicationDev\GiftCard\obj\Debug\net6.0-windows\GiftCard.Form1.resources
 C:\Users\tmcm0\OneDrive\Documents\GitHub\GiftCard_ApplicationDev\GiftCard\obj\Debug\net6.0-windows\GiftCard.csproj.GenerateResource.cache
 C:\Users\tmcm0\OneDrive\Documents\GitHub\GiftCard_ApplicationDev\GiftCard\obj\Debug\net6.0-windows\GiftCard.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\tmcm0\OneDrive\Documents\GitHub\GiftCard_ApplicationDev\GiftCard\obj\Debug\net6.0-windows\GiftCard.AssemblyInfoInputs.cache
@@ -133,3 +132,6 @@ C:\Users\Pyae\Documents\GitHub\GiftCard_ApplicationDev\GiftCard\bin\Debug\net6.0
 C:\Users\Pyae\Documents\GitHub\GiftCard_ApplicationDev\GiftCard\bin\Debug\net6.0-windows\Images\RebelGiftCard.png
 C:\Users\Pyae\Documents\GitHub\GiftCard_ApplicationDev\GiftCard\bin\Debug\net6.0-windows\Images\WestfieldGiftCard.png
 C:\Users\tmcm0\OneDrive\Documents\GitHub\GiftCard_ApplicationDev\GiftCard\obj\Debug\net6.0-windows\GiftCard.GiftCardItem.resources
+C:\Users\tmcm0\OneDrive\Documents\GitHub\GiftCard_ApplicationDev\GiftCard\obj\Debug\net6.0-windows\GiftCard.GiftCardDetails.resources
+C:\Users\tmcm0\OneDrive\Documents\GitHub\GiftCard_ApplicationDev\GiftCard\obj\Debug\net6.0-windows\GiftCard.Form1.resources
+C:\Users\tmcm0\OneDrive\Documents\GitHub\GiftCard_ApplicationDev\GiftCard\obj\Debug\net6.0-windows\GiftCard.Transfer.resources

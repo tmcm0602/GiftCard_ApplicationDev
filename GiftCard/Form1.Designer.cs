@@ -1,6 +1,6 @@
 ﻿namespace GiftCard
 {
-    partial class LoginForm
+    partial class Form1
     {
         /// <summary>
         ///  Required designer variable.
@@ -53,7 +53,6 @@
             usernameTextBox.Name = "usernameTextBox";
             usernameTextBox.Size = new Size(161, 27);
             usernameTextBox.TabIndex = 1;
-            usernameTextBox.TextChanged += usernameTextBox_TextChanged;
             // 
             // label2
             // 
@@ -92,7 +91,7 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
-            // LoginForm
+            // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -103,7 +102,7 @@
             Controls.Add(label2);
             Controls.Add(usernameTextBox);
             Controls.Add(label1);
-            Name = "LoginForm";
+            Name = "Form1";
             Text = "Form1";
             Load += Form1_Load;
             ResumeLayout(false);
