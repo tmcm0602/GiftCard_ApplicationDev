@@ -77,6 +77,7 @@
             // 
             richTextBox1.Location = new Point(37, 181);
             richTextBox1.Name = "richTextBox1";
+            richTextBox1.ReadOnly = true;
             richTextBox1.Size = new Size(287, 159);
             richTextBox1.TabIndex = 6;
             richTextBox1.Text = "";
@@ -86,6 +87,7 @@
             // 
             textBox3.Location = new Point(170, 98);
             textBox3.Name = "textBox3";
+            textBox3.ReadOnly = true;
             textBox3.Size = new Size(154, 26);
             textBox3.TabIndex = 5;
             // 
@@ -93,6 +95,7 @@
             // 
             textBox2.Location = new Point(117, 48);
             textBox2.Name = "textBox2";
+            textBox2.ReadOnly = true;
             textBox2.Size = new Size(207, 26);
             textBox2.TabIndex = 4;
             // 
@@ -144,6 +147,7 @@
             // 
             richTextBox2.Location = new Point(170, 83);
             richTextBox2.Name = "richTextBox2";
+            richTextBox2.ReadOnly = true;
             richTextBox2.Size = new Size(212, 204);
             richTextBox2.TabIndex = 5;
             richTextBox2.Text = "";

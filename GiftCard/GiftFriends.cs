@@ -16,12 +16,15 @@ namespace GiftCard
         private string loggedInUser;
         private string friendUsername;
         private List<GiftCardItem> giftCardItems;
+        private bool userExist = false;
         public GiftFriends(string loggedInUser)
         {
             InitializeComponent();
             this.loggedInUser = loggedInUser;
             ViewMyGiftCards();
             SelectGiftCard();
+
+                
         }
         private void viewGiftCardsPanel_Paint(object sender, PaintEventArgs e)
         {
@@ -43,6 +46,7 @@ namespace GiftCard
 
                 if (user != null)
                 {
+                    userExist = true;
                     informationBox.Text = "The user exists. Please select one of your following gift cards to send to your friend!";
                 }
                 else
@@ -60,11 +64,11 @@ namespace GiftCard
             foreach (var card in giftCardItems)
             {
 
-                card.CardClicked += (sender, e) =>
+                card.ItemClicked += (sender, e) =>
                 {
-                    if (usernameBox.Text == string.Empty)
+                    if (usernameBox.Text == string.Empty || userExist == false)
                     {
-                        MessageBox.Show("Please enter the username of the user that you want to gift!", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Please enter valid username of the user that you want to gift!", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     else
                     {
@@ -87,13 +91,15 @@ namespace GiftCard
                                 }
 
                             }
-                            this.Hide();
+                            this.Close();
 
 
                         }
                         else if (result == DialogResult.No)
                         {
-
+                            userExist = false;       //set this to false again to prevent working again the user inputs invalid username
+                            usernameBox.Text = string.Empty;
+                            informationBox.Text = string.Empty; 
                         }
                     }
 
@@ -121,12 +127,6 @@ namespace GiftCard
                     })
             .ToList();
 
-                /* usergiftCardIds = context.UserGiftCards.Where(usergiftCardIds => usergiftCardIds.username == this.loggedInUser)
-                                 .Select(usergiftCardIds => usergiftCardIds.Giftcard_id).ToList();
-
-                 List<Double> usergiftCardFunds = context.UserGiftCards.Where(usergiftCardFunds => usergiftCardFunds.username == this.loggedInUser)
-                                 .Select(usergiftCardFunds => usergiftCardFunds.Giftcard_availablefunds).ToList();*/
-
                 foreach (var userGiftCard in userGiftCards)
                 {
                     var giftCard = context.GIFTCARD.FirstOrDefault(g => g.Id == userGiftCard.giftCardId);
@@ -153,8 +153,6 @@ namespace GiftCard
             {
                 viewGiftCardsPanel.Controls.Add(giftCardItem);
             }
-            //Form form = new Form(giftcard GiftCard) 
-            //form.show();
         }
 
         private string GetImagePathByBrand(string brand)
@@ -175,7 +173,7 @@ namespace GiftCard
                 case "jbhifi":
                     return "Images/JBhifiGiftCard.png";
                 default:
-                    return null; // You can return a default image for unknown brands if needed.
+                    return null;
             }
         }
 

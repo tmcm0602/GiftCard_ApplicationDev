@@ -77,6 +77,7 @@
             informationBox.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
             informationBox.Location = new Point(481, 12);
             informationBox.Name = "informationBox";
+            informationBox.ReadOnly = true;
             informationBox.Size = new Size(307, 67);
             informationBox.TabIndex = 4;
             informationBox.Text = "";

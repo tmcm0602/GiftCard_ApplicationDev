@@ -77,7 +77,7 @@ namespace GiftCard
             string receipt = "Your Order Details: \n\n";
 
 
-            foreach (int item in walletOptions.SelectedIndices)
+            foreach (int item in walletOptions.SelectedIndices)             //loop through the selected giftcards
             {
                 receipt = receipt + "$" + walletOptions.Items[item].ToString() + " Gift Card" + "\n";
                 totalPrice += Convert.ToDouble(walletOptions.Items[item].ToString());
@@ -91,7 +91,7 @@ namespace GiftCard
                                           giftCard.GiftCardValue
                                       }).ToList();
 
-                    Random random = new Random();
+                    Random random = new Random();            //randomly generate the id for the row in the usergiftcards table
                     int num = random.Next(50000, 100000);
                     string giftCardCode = GenerateGiftCardCode();
 
@@ -106,7 +106,7 @@ namespace GiftCard
             return receipt;
         }
 
-        private string GenerateGiftCardCode()
+        private string GenerateGiftCardCode()             //this method is to randomly generate 16 digits code for giftcardcode
         {
             Random random = new Random();
             StringBuilder giftCardCode = new StringBuilder();
@@ -114,7 +114,7 @@ namespace GiftCard
             int j = 0;
             for (int i = 0; i < 19; i++)
             {
-                if (j % 4 == 0 & j > 0)
+                if (j % 4 == 0 & j > 0)                 //every four characters in the code is separted by a hyphen
                 {
                     giftCardCode.Append('-');
                     j = 0;

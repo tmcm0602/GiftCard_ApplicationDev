@@ -13,7 +13,7 @@ namespace GiftCard
     public partial class GiftCardItem : UserControl
     {
         private int id;
-        public event EventHandler CardClicked;
+        //public event EventHandler CardClicked;
         public Image image
         {
             get { return pictureBox1.Image; }
@@ -46,7 +46,7 @@ namespace GiftCard
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             ItemClicked?.Invoke(this, EventArgs.Empty);
-            CardClicked?.Invoke(this, EventArgs.Empty);
+            //CardClicked?.Invoke(this, EventArgs.Empty);
         }
     }
 }
