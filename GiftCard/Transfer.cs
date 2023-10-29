@@ -83,13 +83,12 @@ namespace GiftCard
             if (listBox1.SelectedItem != null)
             {
                 selectedGiftCardCode = listBox1.SelectedItem.ToString().Replace(" ", "");
-                
+
                 string[] codeParts = selectedGiftCardCode.Split(',');
 
                 if (codeParts.Length > 0)
                 {
                     code = codeParts[codeParts.Length - 1];
-                    MessageBox.Show(code);
                 }
                 else
                 {
@@ -103,30 +102,45 @@ namespace GiftCard
 
             if (Decimal.TryParse(textBox1.Text, out decimal amount))
             {
-                using (var context = new GiftCardContext())
+                if (GetUserGiftCard().Giftcard_availablefunds >= amount)
                 {
-
-                    var originalUserGiftCard = context.UserGiftCards.FirstOrDefault(ugc => ugc.Giftcard_code == this.code);
-
-                    // Find the selected user gift card
-                    var selectedUserGiftCard = context.UserGiftCards.FirstOrDefault(ugc => ugc.Giftcard_code == code);
-
-                    if (originalUserGiftCard != null && selectedUserGiftCard != null)
+                    using (var context = new GiftCardContext())
                     {
-                        originalUserGiftCard.Giftcard_availablefunds -= amount;
-                        // Update the AvailableFunds with the new amount
-                        selectedUserGiftCard.Giftcard_availablefunds += amount;
 
-                        context.SaveChanges();
+                        var originalUserGiftCard = context.UserGiftCards.FirstOrDefault(usergiftcard => usergiftcard.Giftcard_code == this.code);
 
-                        MessageBox.Show("Funds Successfully transferred");
+
+                        var selectedUserGiftCard = context.UserGiftCards.FirstOrDefault(usergiftcard => usergiftcard.Giftcard_code == code);
+
+                        if (originalUserGiftCard != null && selectedUserGiftCard != null)
+                        {
+                            originalUserGiftCard.Giftcard_availablefunds -= amount;
+
+                            selectedUserGiftCard.Giftcard_availablefunds += amount;
+
+                            context.SaveChanges();
+
+                            MessageBox.Show("Funds Successfully transferred");
+                        }
                     }
+                }
+                else
+                {
+                    MessageBox.Show("Not enough funds");
                 }
             }
             else
             {
                 MessageBox.Show("Couldn't convert to Decimal");
             }
+            MyGiftCards mygiftcards = new MyGiftCards(GetUserGiftCard().username);
+            mygiftcards.Show();
+            this.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

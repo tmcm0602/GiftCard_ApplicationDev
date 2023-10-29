@@ -85,6 +85,7 @@ namespace GiftCard
         {
             Transfer transfer = new Transfer(getUserGiftCards(), label1.Text);
             transfer.Show();
+            this.Close();
         }
 
         private List<UserGiftCards> getUserGiftCards()
@@ -108,6 +109,6 @@ namespace GiftCard
             }
             return usergiftcard;
         }
-        
+
     }
 }

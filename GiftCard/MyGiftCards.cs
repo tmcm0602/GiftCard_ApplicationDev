@@ -73,16 +73,10 @@ namespace GiftCard
             {
                 flowLayoutPanel1.Controls.Add(giftCardItem);
             }
-
-
-
-
-
         }
 
         private string GetImagePathByBrand(string brand)
         {
-            // Map the brand name to the corresponding image path.
             switch (brand.ToLower())
             {
                 case "kayo":
@@ -98,13 +92,13 @@ namespace GiftCard
                 case "jbhifi":
                     return "Images/JBhifiGiftCard.png";
                 default:
-                    return null; // You can return a default image for unknown brands if needed.
+                    return null;
             }
         }
 
-        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        private void homeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
     }
 }

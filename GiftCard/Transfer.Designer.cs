@@ -35,6 +35,7 @@
             label2 = new Label();
             textBox1 = new TextBox();
             label1 = new Label();
+            button2 = new Button();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -112,11 +113,22 @@
             label1.TabIndex = 0;
             label1.Text = "Transfer";
             // 
+            // button2
+            // 
+            button2.Location = new Point(17, 20);
+            button2.Name = "button2";
+            button2.Size = new Size(94, 29);
+            button2.TabIndex = 1;
+            button2.Text = "Back";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
             // Transfer
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(button2);
             Controls.Add(panel1);
             Name = "Transfer";
             Text = "Transfer";
@@ -134,5 +146,6 @@
         private Label label1;
         private ListBox listBox1;
         private Button button1;
+        private Button button2;
     }
 }

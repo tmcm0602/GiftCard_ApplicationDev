@@ -164,7 +164,7 @@
             Controls.Add(button2);
             Controls.Add(tableLayoutPanel1);
             Controls.Add(pictureBox1);
-            FormBorderStyle = FormBorderStyle.None;
+            FormBorderStyle = FormBorderStyle.FixedDialog;
             Name = "GiftCardDetails";
             Text = "GiftCardDetails";
             Load += GiftCardDetails_Load;
