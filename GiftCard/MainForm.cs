@@ -28,7 +28,7 @@ namespace GiftCard
             var products = new[]
             {
                 new { ImagePath = "Images/JBhifiGiftCard.png" },
-                new { ImagePath = "Images/AmzaonGiftCard.png" },
+                new { ImagePath = "Images/AmazonGiftCard.png" },
                 new { ImagePath = "Images/BingeGiftCard.png" },
                 new { ImagePath = "Images/KayoGiftCard.png" },
                 new { ImagePath = "Images/RebelGiftCard.png" },

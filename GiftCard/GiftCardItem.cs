@@ -13,7 +13,6 @@ namespace GiftCard
     public partial class GiftCardItem : UserControl //class is used to display all the gift cards in the mygiftcards form by creating a small form to represent each card
     {
         private int id;
-        //public event EventHandler CardClicked;
         public Image image
         {
             get { return pictureBox1.Image; }
@@ -46,7 +45,7 @@ namespace GiftCard
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             ItemClicked?.Invoke(this, EventArgs.Empty); //when an giftcard is selected in the MyGiftCard page it activates this tell the MyGiftCard page that it was selected
-            CardClicked?.Invoke(this, EventArgs.Empty);
+
 
         }
     }

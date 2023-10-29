@@ -34,6 +34,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="Images\AmazonGiftCard.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Images\AmzaonGiftCard.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

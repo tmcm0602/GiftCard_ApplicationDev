@@ -125,7 +125,6 @@ C:\Users\tmcm0\OneDrive\Documents\GitHub\GiftCard_ApplicationDev\GiftCard\bin\De
 C:\Users\tmcm0\OneDrive\Documents\GitHub\GiftCard_ApplicationDev\GiftCard\bin\Debug\net6.0-windows\Images\WestfieldGiftCard.png
 C:\Users\tmcm0\OneDrive\Documents\GitHub\GiftCard_ApplicationDev\GiftCard\obj\Debug\net6.0-windows\GiftCard.MyGiftCards.resources
 C:\Users\Pyae\Documents\GitHub\GiftCard_ApplicationDev\GiftCard\obj\Debug\net6.0-windows\GiftCard.MyGiftCards.resources
-C:\Users\Pyae\Documents\GitHub\GiftCard_ApplicationDev\GiftCard\bin\Debug\net6.0-windows\Images\AmzaonGiftCard.png
 C:\Users\Pyae\Documents\GitHub\GiftCard_ApplicationDev\GiftCard\bin\Debug\net6.0-windows\Images\BingeGiftCard.png
 C:\Users\Pyae\Documents\GitHub\GiftCard_ApplicationDev\GiftCard\bin\Debug\net6.0-windows\Images\JBhifiGiftCard.png
 C:\Users\Pyae\Documents\GitHub\GiftCard_ApplicationDev\GiftCard\bin\Debug\net6.0-windows\Images\KayoGiftCard.png
@@ -140,3 +139,4 @@ C:\Users\Pyae\Documents\GitHub\GiftCard_ApplicationDev\GiftCard\obj\Debug\net6.0
 C:\Users\Pyae\Documents\GitHub\GiftCard_ApplicationDev\GiftCard\obj\Debug\net6.0-windows\GiftCard.GiftFriends.resources
 C:\Users\Pyae\Documents\GitHub\GiftCard_ApplicationDev\GiftCard\obj\Debug\net6.0-windows\GiftCard.Transfer.resources
 C:\Users\tmcm0\OneDrive\Documents\GitHub\GiftCard_ApplicationDev\GiftCard\obj\Debug\net6.0-windows\GiftCard.GiftFriends.resources
+C:\Users\Pyae\Documents\GitHub\GiftCard_ApplicationDev\GiftCard\bin\Debug\net6.0-windows\Images\AmazonGiftCard.png
