@@ -22,11 +22,11 @@ namespace GiftCard
             this.giftcards = usergiftCards;
             this.code = code;
 
-            foreach (var userGiftCard in giftcards)
+            foreach (var userGiftCard in giftcards) 
             {
                 if (!userGiftCard.Giftcard_code.Equals(code))
                 {
-                    listBox1.Items.Add(getGiftCardName(userGiftCard.Giftcard_id) + ", " + userGiftCard.Giftcard_code + "");
+                    listBox1.Items.Add(getGiftCardName(userGiftCard.Giftcard_id) + ", " + userGiftCard.Giftcard_code + ""); //adds giftcards to the listbox excluding the original giftcard selected in the MyGiftCard page
                 }
                 else
                 {
@@ -45,7 +45,7 @@ namespace GiftCard
 
         }
 
-        private string getGiftCardName(int id)
+        private string getGiftCardName(int id) //returns the giftcard name in the giftcard table for the usergiftcard by using the giftcard_id
         {
             string giftcard = "";
             using (var context = new GiftCardContext())
@@ -62,7 +62,7 @@ namespace GiftCard
 
         }
 
-        private UserGiftCards GetUserGiftCard()
+        private UserGiftCards GetUserGiftCard() //retrieves the giftcard selected in the MyGiftCard page
         {
             foreach (var userGiftCard in giftcards)
             {
@@ -82,13 +82,13 @@ namespace GiftCard
 
             if (listBox1.SelectedItem != null)
             {
-                selectedGiftCardCode = listBox1.SelectedItem.ToString().Replace(" ", "");
+                selectedGiftCardCode = listBox1.SelectedItem.ToString().Replace(" ", ""); //retrieves the giftcard selected in the list box and removes whitespace
 
-                string[] codeParts = selectedGiftCardCode.Split(',');
+                string[] codeParts = selectedGiftCardCode.Split(','); //splits the giftcard name and giftcard code
 
                 if (codeParts.Length > 0)
                 {
-                    code = codeParts[codeParts.Length - 1];
+                    code = codeParts[codeParts.Length - 1]; //returns the giftcard code
                 }
                 else
                 {
@@ -100,7 +100,7 @@ namespace GiftCard
                 MessageBox.Show("No GiftCard Selected");
             }
 
-            if (Decimal.TryParse(textBox1.Text, out decimal amount))
+            if (Decimal.TryParse(textBox1.Text, out decimal amount)) // converts the amount entered in the textbox to the type decimal
             {
                 if (GetUserGiftCard().Giftcard_availablefunds >= amount)
                 {
@@ -114,11 +114,11 @@ namespace GiftCard
 
                         if (originalUserGiftCard != null && selectedUserGiftCard != null)
                         {
-                            originalUserGiftCard.Giftcard_availablefunds -= amount;
+                            originalUserGiftCard.Giftcard_availablefunds -= amount; //removes the funds from the original giftcard
 
-                            selectedUserGiftCard.Giftcard_availablefunds += amount;
+                            selectedUserGiftCard.Giftcard_availablefunds += amount; //adds those funds to the giftcard selected
 
-                            context.SaveChanges();
+                            context.SaveChanges(); //updates the table
 
                             MessageBox.Show("Funds Successfully transferred");
                         }

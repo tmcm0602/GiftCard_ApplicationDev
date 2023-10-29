@@ -25,7 +25,7 @@ namespace GiftCard
             if (!string.IsNullOrEmpty(imagePath))
             {
                 Image value = Image.FromFile(imagePath);
-                pictureBox1.Image = value; pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+                pictureBox1.Image = value; pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;//sets the image to the imagepath and makes it fit the picturebox element
             }
         }
 
@@ -37,10 +37,10 @@ namespace GiftCard
         private void viewGiftCardDetails()
         {
 
-            string name = this.giftcard.GiftCardName;
-            label2.Text = name;
-            string description = this.giftcard.GiftCardDescription;
-            label5.Text = description;
+            string name = this.giftcard.GiftCardName; //retrieves giftcard name
+            label2.Text = name; // sets the giftcard name
+            string description = this.giftcard.GiftCardDescription; //retrieves giftcard description
+            label5.Text = description; //sets giftcard description
 
             using (var context = new GiftCardContext())
             {
@@ -49,10 +49,10 @@ namespace GiftCard
                     {
                         usergiftcard.Giftcard_availablefunds,
                         usergiftcard.Giftcard_code
-                    }).FirstOrDefault();
+                    }).FirstOrDefault(); // searches UserGiftCard table for the giftcard that matches that giftcard id and belongs to the logged in user
 
-                label3.Text = "$" + usergiftCard.Giftcard_availablefunds.ToString();
-                label1.Text = usergiftCard.Giftcard_code.ToString();
+                label3.Text = "$" + usergiftCard.Giftcard_availablefunds.ToString(); //sets the label to the available funds for the giftcard found above
+                label1.Text = usergiftCard.Giftcard_code.ToString(); //sets the label to the giftcard code for that specific card found above
             }
         }
 
@@ -83,7 +83,7 @@ namespace GiftCard
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Transfer transfer = new Transfer(getUserGiftCards(), label1.Text);
+            Transfer transfer = new Transfer(getUserGiftCards(), label1.Text); // opens the transfer form for a specific giftcard and giftcard code
             transfer.Show();
             this.Close();
         }
@@ -103,7 +103,7 @@ namespace GiftCard
                         Giftcard_id = usergiftcard.Giftcard_id,
                         Giftcard_availablefunds = usergiftcard.Giftcard_availablefunds,
                         Giftcard_code = usergiftcard.Giftcard_code.ToString()
-                    }).ToList();
+                    }).ToList(); // Searches Usergiftcards table with the username to find all the gift cards assigned to that user
 
 
             }

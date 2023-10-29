@@ -36,19 +36,19 @@ namespace GiftCard
                         AvailableFunds = userGiftCard.Giftcard_availablefunds
                     })
             .ToList();
+                //Searches the database and retrieves the giftcard id and available funds for the gift cards for that specific user
 
 
-
-                foreach (var userGiftCard in userGiftCards)
+                foreach (var userGiftCard in userGiftCards) // iterates over the list generated in the above code
                 {
-                    var giftCard = context.GIFTCARD.FirstOrDefault(g => g.Id == userGiftCard.giftCardId);
+                    var giftCard = context.GIFTCARD.FirstOrDefault(g => g.Id == userGiftCard.giftCardId); // Searches the GiftCard table using the giftcard id found in each giftcard
                     if (giftCard != null)
                     {
-                        var giftCardItem = new GiftCardItem
+                        var giftCardItem = new GiftCardItem //creates an instance of the GiftCard
                         {
                             AvailableFunds = userGiftCard.AvailableFunds
                         };
-                        string imagePath = GetImagePathByBrand(giftCard.Brand);
+                        string imagePath = GetImagePathByBrand(giftCard.Brand); //gets the image for each giftcard
 
                         if (!string.IsNullOrEmpty(imagePath))
                         {
@@ -57,7 +57,7 @@ namespace GiftCard
 
                         giftCardItems.Add(giftCardItem);
 
-                        giftCardItem.ItemClicked += (sender, e) =>
+                        giftCardItem.ItemClicked += (sender, e) => //when a giftcard is clicked it will send you to that specific giftcarddetails page with that cards details
                         {
                             string imagePath = GetImagePathByBrand(giftCard.Brand);
 
