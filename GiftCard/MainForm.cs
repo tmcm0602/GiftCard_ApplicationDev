@@ -18,13 +18,13 @@ namespace GiftCard
             this.username = username;
             InitializeComponent();
             AddProductItems();
-            
+
         }
 
         private void AddProductItems()
         {
             // Create a list of product information (image path, price, etc.)
-            string[] giftCards = new[] { "JBhifi", "Amazon", "Binge", "Kayo", "Rebel", "WestField"};
+            string[] giftCards = new[] { "JBhifi", "Amazon", "Binge", "Kayo", "Rebel", "WestField" };
             var products = new[]
             {
                 new { ImagePath = "Images/JBhifiGiftCard.png" },
@@ -32,7 +32,7 @@ namespace GiftCard
                 new { ImagePath = "Images/BingeGiftCard.png" },
                 new { ImagePath = "Images/KayoGiftCard.png" },
                 new { ImagePath = "Images/RebelGiftCard.png" },
-                new { ImagePath = "Images/WestfieldGiftCard.png" },       
+                new { ImagePath = "Images/WestfieldGiftCard.png" },
             };
 
             int n = 0;
@@ -72,6 +72,12 @@ namespace GiftCard
         {
             this.Close();
 
+        }
+
+        private void myGiftCardsToolStripMenutItem1_Click(object sender, EventArgs e)
+        {
+            new MyGiftCards(this.username).Show();
+            this.Close();
         }
 
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)

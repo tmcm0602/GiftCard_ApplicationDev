@@ -154,7 +154,7 @@
             exitButton.Name = "exitButton";
             exitButton.Size = new Size(127, 54);
             exitButton.TabIndex = 4;
-            exitButton.Text = "Cancel";
+            exitButton.Text = "Exit";
             exitButton.UseVisualStyleBackColor = true;
             exitButton.Click += Exit_Click;
             // 

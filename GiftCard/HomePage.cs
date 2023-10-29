@@ -37,6 +37,18 @@ namespace GiftCard
             giftFriends.Show();
         }
 
+        private void LogOutButton_Click(object sender, EventArgs e)
+        {
+            Form1 form1 = new Form1();
+            form1.Show();
+            this.Close();
+        }
+
+        private void ExitButton_Click(Object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
         private void groupBox1_Enter(object sender, EventArgs e)
         {
 

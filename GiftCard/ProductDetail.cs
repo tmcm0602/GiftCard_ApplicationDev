@@ -90,9 +90,12 @@ namespace GiftCard
                                           giftCard.Id,
                                           giftCard.GiftCardValue
                                       }).ToList();
+
                     Random random = new Random();
                     int num = random.Next(50000, 100000);
-                    var userCard = new UserGiftCards() { id = num, username = userName, Giftcard_id = userGiftCard[0].Id, Giftcard_availablefunds = userGiftCard[0].GiftCardValue };
+                    string giftCardCode = GenerateGiftCardCode();
+
+                    var userCard = new UserGiftCards() { id = num, username = userName, Giftcard_id = userGiftCard[0].Id, Giftcard_availablefunds = userGiftCard[0].GiftCardValue, Giftcard_code = giftCardCode };
                     context.UserGiftCards.Add(userCard);
 
                     context.SaveChanges();
@@ -101,6 +104,29 @@ namespace GiftCard
             }
             receipt += "Total Price is $" + totalPrice + ".\n\nSuccessfully Purchased Gift Cards!!";
             return receipt;
+        }
+
+        private string GenerateGiftCardCode()
+        {
+            Random random = new Random();
+            StringBuilder giftCardCode = new StringBuilder();
+            string codes = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            int j = 0;
+            for (int i = 0; i < 19; i++)
+            {
+                if (j % 4 == 0 & j > 0)
+                {
+                    giftCardCode.Append('-');
+                    j = 0;
+                }
+                else
+                {
+                    giftCardCode.Append(codes[random.Next(codes.Length)]);
+                    j++;
+                }
+            }
+
+            return giftCardCode.ToString();
         }
 
         private void Purchase_Click(Object sender, EventArgs e)

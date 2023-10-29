@@ -44,7 +44,7 @@ namespace GiftCard
 
             using (var context = new GiftCardContext())
             {
-                var usergiftCard = context.UserGiftCards.Where(usergiftcard => usergiftcard.Giftcard_id == this.giftcard.Id)
+                var usergiftCard = context.UserGiftCards.Where(usergiftcard => usergiftcard.Giftcard_id == this.giftcard.Id && usergiftcard.username == this.loggedInUser)
                     .Select(usergiftcard => new
                     {
                         usergiftcard.Giftcard_availablefunds,

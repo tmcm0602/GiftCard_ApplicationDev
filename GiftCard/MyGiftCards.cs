@@ -63,6 +63,7 @@ namespace GiftCard
 
                             GiftCardDetails giftcarddetails = new GiftCardDetails(giftCard, imagePath, this.loggedInUser);
                             giftcarddetails.Show();
+                            this.Close();
                         };
                     }
                 }

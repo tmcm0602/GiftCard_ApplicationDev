@@ -79,7 +79,7 @@ namespace GiftCard
                                 int num = random.Next(50000, 100000);
                                 if (userGiftCard != null)
                                 {
-                                    var newUserGiftCard = new UserGiftCards() { id = num, username = usernameBox.Text, Giftcard_id = userGiftCard.Giftcard_id, Giftcard_availablefunds = userGiftCard.Giftcard_availablefunds };
+                                    var newUserGiftCard = new UserGiftCards() { id = num, username = usernameBox.Text, Giftcard_id = userGiftCard.Giftcard_id, Giftcard_availablefunds = userGiftCard.Giftcard_availablefunds, Giftcard_code = userGiftCard.Giftcard_code };
                                     context.UserGiftCards.Add(newUserGiftCard);
 
                                     context.UserGiftCards.Remove(userGiftCard);
